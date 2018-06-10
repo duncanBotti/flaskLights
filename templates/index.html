@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Flask Lights</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="row">
+  <div class="col-md-offset-2 col-md-8">
+      <div class="panel-heading text-center">
+        <h3> Duncan's Home Automation </h3> 
+        <h4> Turn lights on and off </h4> 
+      <div class="panel-body">
+        
+        <h4> standing lamp </h4>
+      	<div class="btn-group">
+  			<button type="button" class="btn btn-success" id="lightOneOn">On</button>       
+  			<button type="button" class="btn btn-primary" id="lightOneOff">Off</button>
+		</div>
+        <h4> lamp by window </h4>
+      	<div class="btn-group">
+  			<button type="button" class="btn btn-success" id="lightTwoOn">On</button>       
+  			<button type="button" class="btn btn-primary" id="lightTwoOff">Off</button>
+		</div>
+        <h4> lamp by plant </h4>
+      	<div class="btn-group">
+  			<button type="button" class="btn btn-success" id="lightThreeOn">On</button>       
+  			<button type="button" class="btn btn-primary" id="lightThreeOff">Off</button>
+		</div>
+      </div>
+     </div>
+  </div>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <script type="text/javascript">
+        $( "#lightOneOn").click(function(e){
+            $.ajax({
+                url: "http://192.168.0.179:5000/lightApp/tasks/1"
+            });
+            console.log('wee');
+        });
+        $( "#lightOneOff").click(function(e){
+            $.ajax({
+                url: "http://192.168.0.179:5000/lightApp/tasks/2"
+            });
+            console.log('wee');
+        });
+
+        $( "#lightTwoOn").click(function(e){
+            $.ajax({
+                url: "http://192.168.0.179:5000/lightApp/tasks/3"
+            });
+            console.log('wee');
+        });
+        $( "#lightTwoOff").click(function(e){
+            $.ajax({
+                url: "http://192.168.0.179:5000/lightApp/tasks/4"
+            });
+            console.log('wee');
+        });
+
+        $( "#lightThreeOn").click(function(e){
+            $.ajax({
+                url: "http://192.168.0.179:5000/lightApp/tasks/5"
+            });
+            console.log('wee');
+        });
+        $( "#lightThreeOff").click(function(e){
+            $.ajax({
+                url: "http://192.168.0.179:5000/lightApp/tasks/6"
+            });
+            console.log('wee');
+        });
+        
+  </script>
+</body>
+</html>
+
