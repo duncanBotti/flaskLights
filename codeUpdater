@@ -1,0 +1,11 @@
+
+
+echo pulling code
+gitPullStatus=`cd /home/pi/Desktop/flaskLights && /usr/bin/git pull`
+if [ "$gitPullStatus" = "Already up-to-date." ]; then
+	echo code up to date no need to redeploy app
+else
+	echo new code pulled redeploying app
+fi
+
+

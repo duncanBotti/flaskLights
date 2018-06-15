@@ -52,6 +52,7 @@ def get_tasks(task_id):
         return jsonify({'light' : lightOffSuccess})
     return jsonify({'light' : lightOffSuccess})
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
