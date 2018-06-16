@@ -52,6 +52,10 @@ def get_tasks(task_id):
         return jsonify({'light' : lightOffSuccess})
     return jsonify({'light' : lightOffSuccess})
 
+@app.route('/shutdown', methods=['POST'])
+def shutdown():
+    shutdown_server()
+    return 'Server shutting down...'
 
 @app.route('/')
 def index():
