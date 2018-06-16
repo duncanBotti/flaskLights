@@ -18,21 +18,27 @@
         <h4> Turn lights on and off </h4> 
       <div class="panel-body">
         
-        <h4> standing lamp </h4>
+        <h4> Standing Lamp </h4>
       	<div class="btn-group">
   			<button type="button" class="btn btn-success" id="lightOneOn">On</button>       
   			<button type="button" class="btn btn-primary" id="lightOneOff">Off</button>
 		</div>
-        <h4> lamp by window </h4>
+        <h4> Lamp by Window </h4>
       	<div class="btn-group">
   			<button type="button" class="btn btn-success" id="lightTwoOn">On</button>       
   			<button type="button" class="btn btn-primary" id="lightTwoOff">Off</button>
 		</div>
-        <h4> lamp by plant </h4>
+        <h4> Lamp by Plant </h4>
       	<div class="btn-group">
   			<button type="button" class="btn btn-success" id="lightThreeOn">On</button>       
   			<button type="button" class="btn btn-primary" id="lightThreeOff">Off</button>
 		</div>
+	<h4> All Lights </h4>
+        <div class="btn-group">
+                        <button type="button" class="btn btn-success" id="lightAllOn">On</button>
+                        <button type="button" class="btn btn-primary" id="lightAllOff">Off</button>
+                </div>
+
       </div>
      </div>
   </div>
@@ -77,6 +83,21 @@
             });
             console.log('wee');
         });
+
+	$( "#lightAllOn").click(function(e){
+            $.ajax({
+                url: "http://192.168.0.179:5000/lightApp/tasks/7"
+            });
+            console.log('wee');
+        });
+
+	$( "#lightAllOff").click(function(e){
+            $.ajax({
+                url: "http://192.168.0.179:5000/lightApp/tasks/8"
+            });
+            console.log('wee');
+        });
+
         
   </script>
 </body>

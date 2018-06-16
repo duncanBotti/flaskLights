@@ -50,12 +50,29 @@ def get_tasks(task_id):
         sleep(1)
         lightThreeOff.off()
         return jsonify({'light' : lightOffSuccess})
+    elif task_id == 7:
+        lightOneOn.on()
+        lightTwoOn.on()
+        lightThreeOn.on()
+        sleep(1)
+        lightOneOn.off()
+        lightTwoOn.off()
+        lightThreeOn.off()
+    elif task_id == 8:
+        lightOneOff.on()
+        lightTwoOff.on()
+        lightThreeOff.on()
+        sleep(1)
+        lightOneOff.off()
+        lightTwoOff.off()
+        lightThreeOff.off()
     return jsonify({'light' : lightOffSuccess})
 
-@app.route('/shutdown', methods=['POST'])
-def shutdown():
-    shutdown_server()
-    return 'Server shutting down...'
+
+#@app.route('/shutdown', methods=['POST'])
+#def shutdown():
+#    shutdown_server()
+#    return 'Server shutting down...'
 
 @app.route('/')
 def index():
