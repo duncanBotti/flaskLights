@@ -52,11 +52,13 @@ def get_tasks(task_id):
         return jsonify({'light' : lightOffSuccess})
     elif task_id == 7:
         lightOneOn.on()
-        lightTwoOn.on()
-        lightThreeOn.on()
         sleep(1)
         lightOneOn.off()
+        lightTwoOn.on()
+        sleep(1)
         lightTwoOn.off()
+        lightThreeOn.on()
+        sleep(1)
         lightThreeOn.off()
     elif task_id == 8:
         lightOneOff.on()
