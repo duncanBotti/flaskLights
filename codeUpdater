@@ -8,7 +8,7 @@ else
 	echo new code pulled redeploying app
 	sleep 5
 	echo testing lights
-
+	python /home/pi/Desktop/flaskLights/tests/testLights.py
 fi
 
 
