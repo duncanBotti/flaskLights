@@ -30,4 +30,3 @@ r = requests.get(url7)
 
 
 
-return 0
