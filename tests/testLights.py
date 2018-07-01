@@ -28,3 +28,6 @@ r = requests.get(url6)
 r = requests.get(url8)
 r = requests.get(url7)
 
+
+
+return 0
